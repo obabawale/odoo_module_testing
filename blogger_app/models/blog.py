@@ -23,12 +23,12 @@ class blogger_app(models.Model):
         ('cancel', 'Cancelled'),
         ('reject', 'Rejected'),
     ], string='State', default="draft", readonly=True, help="""
-    When in draft, record has just been created
-    When in submit, record has just been submitted for review
-    When in review, record has just been reviewed and approved
-    When in publish, record has just been published by the creator
-    When in cancel, record has just been cancelled by author
-    When in reject, record has just been rejected by author
+    When in 'draft', record has just been created
+    When in 'submit', record has just been submitted for review
+    When in 'review', record has just been reviewed and approved
+    When in 'publish', record has just been published by the creator
+    When in 'cancel', record has just been cancelled by author
+    When in 'reject', record has just been rejected by author
     """)
 
     def action_submit(self):
