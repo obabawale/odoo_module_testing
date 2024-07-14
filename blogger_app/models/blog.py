@@ -9,7 +9,7 @@ class blogger_app(models.Model):
     _name = 'blogger_app.blog'
     _description = 'Blog'
 
-    name = fields.Char(string="Title")
+    name = fields.Char(string="Blog Title")
     description = fields.Text(string="Blog Contents")
     author_id = fields.Many2one('res.users', string='Created By', default=lambda self: self.env.uid)
     reviewer_id = fields.Many2one('res.users', string='Reviewed By')
